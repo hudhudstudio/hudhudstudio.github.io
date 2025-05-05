@@ -34,3 +34,85 @@
     nextSlide.addClass('active');
   }, 5000);
 </script>
+
+<section class="services">
+  <div class="service-card" data-aos="flip-left">
+    <img src="animation-icon.svg" class="animated-icon">
+    <h3>انیمیشن</h3>
+    <p>ساخت انیمیشن‌های 2D و 3D برای تبلیغات و فیلم‌ها</p>
+  </div>
+  <div class="service-card" data-aos="flip-right">
+    <img src="vfx-icon.svg" class="pulse-animation">
+    <h3>جلوه‌های ویژه</h3>
+    <p>کامپوزیت، اصلاح رنگ و شبیه‌سازی حرفه‌ای</p>
+  </div>
+</section>
+
+<style>
+  .service-card {
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  .animated-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+</style>
+
+<section class="projects">
+  <div class="project-item" data-parallax="scroll" data-image-src="project1.jpg">
+    <div class="project-overlay">
+      <h4>پروژه چیکو</h4>
+      <button class="cta-button">مشاهده دمو</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // فعال‌سازی Parallax با jQuery
+  $('.project-item').parallax({
+    speed: 0.5
+  });
+</script>
+
+<section class="clients">
+  <div class="logo-slider">
+    <img src="client1.png" class="client-logo" data-aos="zoom-in">
+    <img src="client2.png" class="client-logo" data-aos="zoom-in">
+  </div>
+</section>
+
+<script>
+  // اسلایدر با Slick Slider
+  $('.logo-slider').slick({
+    autoplay: true,
+    slidesToShow: 5,
+    responsive: [...]
+  });
+    </script>
+
+    <section class="contact">
+  <form class="animated-form">
+    <input type="text" placeholder="نام شما" required>
+    <textarea placeholder="پیام شما" data-aos="fade-up"></textarea>
+    <button type="submit" class="glow-button">ارسال</button>
+  </form>
+</section>
+
+<style>
+  .glow-button {
+    animation: glow 2s infinite;
+  }
+  @keyframes glow {
+    0% { box-shadow: 0 0 10px #00ff88; }
+    50% { box-shadow: 0 0 20px #00ff88; }
+    100% { box-shadow: 0 0 10px #00ff88; }
+  }
+</style>
